@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { FirestationPageComponent } from './pages/firestation-page/firestation-page.component';
-import { HomePageComponent } from './ui/home-page/home-page.component';
-import { PersonPageComponent } from './persons/pages/page-list-persons/page-list-persons.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'person', component: PersonPageComponent },
-  { path: 'firestation', component: FirestationPageComponent }
-
+  { path: '', redirectTo:'home', pathMatch: 'full' },
+  { path: 'persons',
+    loadChildren:() => import('./persons/persons.module').then(m => m.PersonsModule)
+  },
+  { path: 'firestations',
+  loadChildren:() => import('./firestations/firestations.module').then(m => m.FirestationsModule)
+  },
+  // { 
+  //   path: "**",
+  //   loadChildren:() => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+  // },
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-  })],
+  imports: [RouterModule.forRoot(routes,
+    { preloadingStrategy: PreloadAllModules }
+    )
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CoreRoutingModule } from './core-routing.module';
 import { UIModule } from '../ui/ui.module';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    RouterModule
   ],
   exports: [
     UIModule, HeaderComponent

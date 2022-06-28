@@ -4,25 +4,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonCardComponent } from './persons/person-card/person-card.component';
-import { PersonPageComponent } from './persons/pages/page-list-persons/page-list-persons.component';
-import { FirestationCardComponent } from './firestations/firestation-card/firestation-card.component';
-import { FirestationPageComponent } from './pages/firestation-page/firestation-page.component';
-import { HeaderComponent } from './core/components/header/header.component';
-import { HomePageComponent } from './ui/home-page/home-page.component';
+import { CoreModule } from './core/core.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PersonCardComponent,
-    PersonPageComponent,
-    FirestationCardComponent,
-    FirestationPageComponent,
-    HeaderComponent,
-    HomePageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule,
     HttpClientModule
   ],

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FirestationsService } from './services/firestations/firestations.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,9 @@ import { FirestationsService } from './services/firestations/firestations.servic
 export class AppComponent {
   title = 'SafetyNetAlerts_Front';
 
+  constructor(private router: Router){
+    // sert à voir la config du tableau de routes
+    console.log(this.router.config);
+  }
 
 }

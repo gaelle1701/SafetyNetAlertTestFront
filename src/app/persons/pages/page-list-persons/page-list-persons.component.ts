@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PersonsService } from 'src/app/services/persons/persons.service';
+import { PersonsService } from '../../services/persons.service';
+
 
 @Component({
-  selector: 'app-person-page',
-  templateUrl: './person-page.component.html',
-  styleUrls: ['./person-page.component.css']
+  selector: 'app-page-list-persons',
+  templateUrl: './page-list-persons.component.html',
+  styleUrls: ['./page-list-persons.component.css']
 })
-export class PersonPageComponent implements OnInit {
+export class PageListPersonsComponent implements OnInit {
 
   public personCards!: string[];
   public subsciptionPersons!: Subscription;
   
-
   constructor(private personsService: PersonsService) { }
-
 
   ngOnInit(): void {
     this.subsciptionPersons = this.personsService.personSubject$.subscribe( (personCards: any) => {

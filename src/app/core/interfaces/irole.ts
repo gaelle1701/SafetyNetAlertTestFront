@@ -1,4 +1,4 @@
-import { ERole } from "./erole";
+import { ERole } from "../enums/erole";
 
 export interface IRole {
     id: number;

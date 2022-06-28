@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { FirestationsService } from 'src/app/services/firestations/firestations.service';
 
 @Component({
   selector: 'app-firestation-card',

@@ -4,12 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonCardComponent } from './components/person-card/person-card.component';
-import { PersonPageComponent } from './pages/person-page/person-page.component';
-import { FirestationCardComponent } from './components/firestation-card/firestation-card.component';
+import { PersonCardComponent } from './persons/person-card/person-card.component';
+import { PersonPageComponent } from './persons/pages/page-list-persons/page-list-persons.component';
+import { FirestationCardComponent } from './firestations/firestation-card/firestation-card.component';
 import { FirestationPageComponent } from './pages/firestation-page/firestation-page.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { HomePageComponent } from './ui/home-page/home-page.component';
 
 @NgModule({
   declarations: [

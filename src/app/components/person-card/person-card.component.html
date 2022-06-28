@@ -1,0 +1,20 @@
+<div class="card bg-dark text-light" style="width: 18rem;">
+    <div class="card-body">
+      <h6 class="card-title text-warning">Nom et Prénom:</h6>
+      <p class="text-light">{{ personCards.personId.lastName }}, {{ personCards.firstName }}</p>
+      <h6 class="card-subtitle text-warning mb-2">Date de naissance:</h6>
+      <p class="text-light">{{ personCards.birthdate }}</p>
+      <h6 class="card-subtitle text-warning mb-2">Téléphone:</h6>
+      <p class="text-light">{{ personCards.personId.phone }}</p>
+      <h6 class="card-subtitle text-warning mb-2">Email:</h6>
+      <p class="text-light">{{ personCards.email }}</p>
+      <h6 class="card-subtitle text-warning mb-2">Adresse:</h6>
+      <p class="text-light">{{ personCards.address.address }}, {{ personCards.address.city }} {{ personCards.address.zip }}</p>
+      <h6 class="card-text text-warning">Allergies:</h6>
+      <p class="text-light">{{ personCards.allergyList }}</p>
+      <h6 class="card-text text-warning">Médicaments:</h6>
+      <p class="text-light">{{ personCards.medicationList }}</p>
+      <!-- <p class="card-text">Membres de la familles: </p> -->
+  </div>
+</div>
+

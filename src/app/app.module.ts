@@ -4,14 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonCardComponent } from './person-card/person-card.component';
-import { PersonPageComponent } from './person-page/person-page.component';
+import { PersonCardComponent } from './components/person-card/person-card.component';
+import { PersonPageComponent } from './pages/person-page/person-page.component';
+import { FirestationCardComponent } from './components/firestation-card/firestation-card.component';
+import { FirestationPageComponent } from './pages/firestation-page/firestation-page.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonCardComponent,
-    PersonPageComponent
+    PersonPageComponent,
+    FirestationCardComponent,
+    FirestationPageComponent,
+    HeaderComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
